@@ -65,6 +65,7 @@ window.addEventListener("DOMContentLoaded", function() {
 //show person based on item
 
 function showPerson(person) {
+  console.log(currentItem);
   const item = reviews[currentItem];
   img.src = item.img;
   author.textContent = item.name;
@@ -93,6 +94,9 @@ prevBtn.addEventListener("click", function() {
 
 //Challenge** Ramdom Person by clicking on "Surprise me" button
 randomBtn.addEventListener("click", function() {
-  currentItem = Math.floor(Math.random() * reviews.lenght);
+  console.log(reviews.length);
+  currentItem = Math.floor(Math.random() * reviews.length);
+
+  console.log(currentItem);
   showPerson();
 });
